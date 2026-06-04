@@ -76,33 +76,11 @@
                     <div>
                         <label class="mb-1.5 block text-sm font-medium text-slate-700">Maximum fee (₹)</label>
                         <input type="number" id="rule-max" min="0" step="1" placeholder="25" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 disabled:bg-slate-50 disabled:text-slate-400">
-                        <label class="mt-2 flex items-center gap-2 text-sm text-slate-600">
-                            <input type="checkbox" id="rule-no-max" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
-                            No maximum cap
-                        </label>
+                        
                     </div>
-                    <div>
-                        <label class="mb-1.5 block text-sm font-medium text-slate-700">Effective from <span class="text-red-500">*</span></label>
-                        <input type="date" value="{{ date('Y-m-d') }}" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
-                    </div>
-                    <div>
-                        <label class="mb-1.5 block text-sm font-medium text-slate-700">Effective to</label>
-                        <input type="date" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
-                        <p class="mt-1 text-xs text-slate-500">Leave empty if the rule has no end date.</p>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label class="mb-1.5 block text-sm font-medium text-slate-700">Status</label>
-                        <div class="flex flex-wrap gap-4">
-                            <label class="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 px-4 py-2.5 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50">
-                                <input type="radio" name="status" value="active" checked class="text-emerald-600 focus:ring-emerald-500">
-                                <span class="text-sm font-medium text-slate-700">Active</span>
-                            </label>
-                            <label class="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 px-4 py-2.5 has-[:checked]:border-red-500 has-[:checked]:bg-red-50">
-                                <input type="radio" name="status" value="inactive" class="text-red-600 focus:ring-red-500">
-                                <span class="text-sm font-medium text-slate-700">Inactive</span>
-                            </label>
-                        </div>
-                    </div>
+                    
+
+                   
                     <div class="sm:col-span-2">
                         <label class="mb-1.5 block text-sm font-medium text-slate-700">Internal notes</label>
                         <textarea rows="3" placeholder="Optional notes for audit trail..." class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"></textarea>
@@ -143,20 +121,9 @@
                 </dl>
             </div>
 
-            <div class="rounded-xl bg-brand-50 border border-brand-100 p-5">
-                <div class="flex gap-3">
-                    <svg class="h-5 w-5 shrink-0 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900">Rule priority</p>
-                        <p class="mt-1 text-xs text-slate-600">Tier-specific rules override &ldquo;All&rdquo; for the same service. Conflicting active rules are resolved by the most recent effective date.</p>
-                    </div>
-                </div>
-            </div>
+           
 
-            <div class="rounded-xl border border-slate-100 bg-slate-50 p-5 text-sm text-slate-600">
-                <p class="font-semibold text-slate-800">Example IDs</p>
-                <p class="mt-2 text-xs">New rules are auto-assigned IDs like <span class="font-mono text-brand-600">CM-08</span> after save.</p>
-            </div>
+           
         </div>
     </div>
 </main>

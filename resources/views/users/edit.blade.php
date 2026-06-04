@@ -58,10 +58,7 @@
                         <label class="mb-1.5 block text-sm font-medium text-slate-700">Full Name <span class="text-red-500">*</span></label>
                         <input type="text" value="{{ $user['name'] }}" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
                     </div>
-                    <div>
-                        <label class="mb-1.5 block text-sm font-medium text-slate-700">Business Name <span class="text-red-500">*</span></label>
-                        <input type="text" value="{{ $user['business'] }}" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
-                    </div>
+                    
                     <div>
                         <label class="mb-1.5 block text-sm font-medium text-slate-700">Mobile Number <span class="text-red-500">*</span></label>
                         <input type="tel" value="{{ $user['mobile'] }}" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
@@ -121,10 +118,7 @@
                     </div>
                 </div>
 
-                <label class="mt-6 flex items-center gap-2 text-sm text-slate-600">
-                    <input type="checkbox" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
-                    Notify user about profile changes via Email & SMS
-                </label>
+              
 
                 <div class="mt-8 flex flex-col-reverse gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:justify-end">
                     <a href="{{ route('users.index') }}" class="inline-flex justify-center rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">Cancel</a>

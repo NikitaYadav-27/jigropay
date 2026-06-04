@@ -19,7 +19,6 @@
                         <h2 class="text-lg font-semibold text-slate-900">Initiate Fund Transfer</h2>
                         <p class="text-sm text-slate-500">Transfer funds to your downline network securely.</p>
                     </div>
-                    <span class="rounded-full bg-sky-100 px-3 py-0.5 text-xs font-semibold text-sky-700">System: BBPS-CORE-V2</span>
                 </div>
 
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -59,21 +58,7 @@
                     </div>
                 </div>
 
-                <div class="mt-6 rounded-xl border-2 border-dashed border-sky-200 bg-sky-50/50 p-4">
-                    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                        <div class="flex items-start gap-3">
-                            <svg class="h-6 w-6 shrink-0 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                            <div>
-                                <p class="text-sm font-semibold text-slate-900">Two-Factor Authentication</p>
-                                <p class="text-xs text-slate-500">Enter the 6-digit OTP sent to your registered mobile.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input type="text" maxlength="6" placeholder="000000" class="w-32 rounded-lg border border-slate-200 px-3 py-2 text-center text-lg tracking-widest">
-                            <button type="button" class="text-sm font-semibold text-brand-600 hover:underline">Resend</button>
-                        </div>
-                    </div>
-                </div>
+      
 
                 <div class="mt-6 flex flex-col-reverse gap-3 sm:flex-row">
                     <a href="{{ route('wallet.index') }}" class="inline-flex justify-center rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">Cancel</a>

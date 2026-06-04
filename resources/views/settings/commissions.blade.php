@@ -27,17 +27,12 @@
         <button type="button" id="tab-category" class="commission-tab rounded-md px-4 py-2 text-sm font-semibold bg-white text-brand-600 shadow-sm" data-panel="panel-category" aria-selected="true">
             Category-wise
         </button>
-        <button type="button" id="tab-role" class="commission-tab rounded-md px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900" data-panel="panel-role" aria-selected="false">
-            Role-wise
-        </button>
+        
     </div>
 
     {{-- Category-wise --}}
     <div id="panel-category" class="commission-panel space-y-4">
-        <div class="rounded-xl border border-brand-100 bg-brand-50/50 p-4 text-sm text-slate-700">
-            <p class="font-semibold text-brand-900">Category defaults</p>
-            <p class="mt-1 text-slate-600">These rates apply platform-wide unless overridden by a role-specific rule or commission master entry.</p>
-        </div>
+ 
 
         <div class="rounded-xl border border-slate-100 bg-white shadow-sm">
             <div class="flex flex-col gap-3 border-b border-slate-100 p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
@@ -45,10 +40,7 @@
                     <svg class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     <input type="search" placeholder="Search categories..." class="w-full rounded-lg border border-slate-200 py-2 pl-10 pr-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
                 </div>
-                <button type="button" class="inline-flex items-center gap-2 rounded-lg border border-dashed border-brand-300 px-4 py-2 text-sm font-semibold text-brand-600 hover:bg-brand-50">
-                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                    Add Category
-                </button>
+                
             </div>
 
             <div class="overflow-x-auto">
@@ -61,20 +53,19 @@
                             <th class="px-5 py-3">Commission</th>
                             <th class="px-5 py-3">Min (₹)</th>
                             <th class="px-5 py-3">Max (₹)</th>
-                            <th class="px-5 py-3">Active</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
                         @php
                             $categories = [
-                                ['name' => 'BBPS Bill Pay', 'code' => 'BBPS', 'type' => 'percent', 'rate' => '0.35', 'min' => '1', 'max' => '25', 'active' => true],
-                                ['name' => 'UPI Collect', 'code' => 'UPI', 'type' => 'percent', 'rate' => '0.40', 'min' => '1', 'max' => '20', 'active' => true],
-                                ['name' => 'Wallet Load', 'code' => 'WLT', 'type' => 'percent', 'rate' => '0.25', 'min' => '1', 'max' => '15', 'active' => true],
-                                ['name' => 'Card Payments', 'code' => 'CARD', 'type' => 'percent', 'rate' => '1.85', 'min' => '2', 'max' => '50', 'active' => true],
-                                ['name' => 'NetBanking', 'code' => 'NB', 'type' => 'percent', 'rate' => '0.55', 'min' => '1', 'max' => '30', 'active' => true],
-                                ['name' => 'IMPS / NEFT', 'code' => 'IMPS', 'type' => 'flat', 'rate' => '5', 'min' => '5', 'max' => '5', 'active' => true],
-                                ['name' => 'AePS', 'code' => 'AEPS', 'type' => 'percent', 'rate' => '0.60', 'min' => '2', 'max' => '35', 'active' => false],
-                                ['name' => 'DMT / Remittance', 'code' => 'DMT', 'type' => 'flat', 'rate' => '8', 'min' => '8', 'max' => '8', 'active' => true],
+                                ['name' => 'BBPS Bill Pay', 'code' => 'BBPS', 'type' => 'percent', 'rate' => '0.35', 'min' => '1', 'max' => '25'],
+                                ['name' => 'UPI Collect', 'code' => 'UPI', 'type' => 'percent', 'rate' => '0.40', 'min' => '1', 'max' => '20'],
+                                ['name' => 'Wallet Load', 'code' => 'WLT', 'type' => 'percent', 'rate' => '0.25', 'min' => '1', 'max' => '15'],
+                                ['name' => 'Card Payments', 'code' => 'CARD', 'type' => 'percent', 'rate' => '1.85', 'min' => '2', 'max' => '50'],
+                                ['name' => 'NetBanking', 'code' => 'NB', 'type' => 'percent', 'rate' => '0.55', 'min' => '1', 'max' => '30'],
+                                ['name' => 'IMPS / NEFT', 'code' => 'IMPS', 'type' => 'flat', 'rate' => '5', 'min' => '5', 'max' => '5'],
+                                ['name' => 'AePS', 'code' => 'AEPS', 'type' => 'percent', 'rate' => '0.60', 'min' => '2', 'max' => '35'],
+                                ['name' => 'DMT / Remittance', 'code' => 'DMT', 'type' => 'flat', 'rate' => '8', 'min' => '8', 'max' => '8'],
                             ];
                         @endphp
                         @foreach ($categories as $cat)
@@ -104,12 +95,7 @@
                                 <td class="px-5 py-3">
                                     <input type="text" value="{{ $cat['max'] }}" class="w-20 rounded-lg border border-slate-200 px-2 py-1.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
                                 </td>
-                                <td class="px-5 py-3">
-                                    <label class="relative inline-flex cursor-pointer items-center">
-                                        <input type="checkbox" class="peer sr-only" @checked($cat['active'])>
-                                        <span class="h-6 w-11 rounded-full bg-slate-200 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-brand-600 peer-checked:after:translate-x-full"></span>
-                                    </label>
-                                </td>
+                                
                             </tr>
                         @endforeach
                     </tbody>
@@ -132,17 +118,16 @@
                         <tr>
                             <th class="px-5 py-3">Role</th>
                             <th class="px-5 py-3">Commission (%)</th>
-                            <th class="px-5 py-3">Active</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
                         @php
                             $roles = [
-                                ['name' => 'Super Admin', 'desc' => 'Platform', 'rate' => '0.10', 'active' => true],
-                                ['name' => 'Super Distributor', 'desc' => 'L1 Partner', 'rate' => '0.25', 'active' => true],
-                                ['name' => 'Distributor', 'desc' => 'L2 Partner', 'rate' => '0.30', 'active' => true],
-                                ['name' => 'Retailer', 'desc' => 'L3 Partner', 'rate' => '0.35', 'active' => true],
-                                ['name' => 'Merchant', 'desc' => 'End merchant', 'rate' => '0.00', 'active' => false],
+                                ['name' => 'Super Admin', 'desc' => 'Platform', 'rate' => '0.10'],
+                                ['name' => 'Super Distributor', 'desc' => 'L1 Partner', 'rate' => '0.25'],
+                                ['name' => 'Distributor', 'desc' => 'L2 Partner', 'rate' => '0.30'],
+                                ['name' => 'Retailer', 'desc' => 'L3 Partner', 'rate' => '0.35'],
+                                ['name' => 'Merchant', 'desc' => 'End merchant', 'rate' => '0.00'],
                             ];
                         @endphp
                         @foreach ($roles as $role)
@@ -157,12 +142,7 @@
                                         <span class="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">%</span>
                                     </div>
                                 </td>
-                                <td class="px-5 py-4">
-                                    <label class="relative inline-flex cursor-pointer items-center">
-                                        <input type="checkbox" class="peer sr-only" @checked($role['active'])>
-                                        <span class="h-6 w-11 rounded-full bg-slate-200 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all peer-checked:bg-brand-600 peer-checked:after:translate-x-full"></span>
-                                    </label>
-                                </td>
+                              
                             </tr>
                         @endforeach
                     </tbody>

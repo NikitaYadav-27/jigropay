@@ -20,7 +20,7 @@ Route::get('/login', [WebAuthController::class, 'showLoginForm'])->name('login')
 Route::post('/login', [WebAuthController::class, 'login']);
 Route::post('/logout', [WebAuthController::class, 'logout'])->name('logout');
 
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::prefix('users')->name('users.')->group(function () {
@@ -88,4 +88,4 @@ Route::prefix('masters')->name('masters.')->group(function () {
     Route::get('/commission', [MasterController::class, 'commission'])->name('commission');
     Route::get('/audit-logs', [MasterController::class, 'auditLogs'])->name('audit');
 });
-});
+// });

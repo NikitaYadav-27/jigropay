@@ -22,31 +22,22 @@
                 <div>
                     <label class="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">Audience</label>
                     <select class="w-full appearance-none rounded-lg border border-slate-200 px-4 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
-                        <option>All Active Merchants (2,914)</option>
+                        <option>All Active Users</option>
+                        <option>All Super Distributors</option>
                         <option>All Distributors</option>
                         <option>All Retailers</option>
-                        <option>Custom Segment</option>
                     </select>
                 </div>
 
                 <div>
-                    <label class="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">Channels</label>
+                    <label class="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">Channel</label>
                     <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
                         <label class="flex cursor-pointer items-center gap-3 rounded-xl border-2 border-brand-600 bg-brand-50/50 p-4">
                             <input type="checkbox" checked class="rounded border-brand-600 text-brand-600 focus:ring-brand-500">
                             <span class="text-xl">🔔</span>
                             <span class="font-semibold text-slate-900">Push</span>
                         </label>
-                        <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-4 hover:border-slate-300">
-                            <input type="checkbox" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
-                            <span class="text-xl">📱</span>
-                            <span class="font-semibold text-slate-700">SMS</span>
-                        </label>
-                        <label class="flex cursor-pointer items-center gap-3 rounded-xl border-2 border-brand-600 bg-brand-50/50 p-4">
-                            <input type="checkbox" checked class="rounded border-brand-600 text-brand-600 focus:ring-brand-500">
-                            <span class="text-xl">✉️</span>
-                            <span class="font-semibold text-slate-900">Email</span>
-                        </label>
+                      
                     </div>
                 </div>
 

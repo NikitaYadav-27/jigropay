@@ -48,10 +48,7 @@
                             <svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             Bengaluru HQ, India
                         </p>
-                        <p class="flex items-center gap-2 text-sm text-slate-600">
-                            <svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            IST UTC +5:30
-                        </p>
+                        
                     </div>
                 </div>
             </div>
@@ -77,15 +74,13 @@
 
     <div class="mb-4 border-b border-slate-200">
         <button type="button" class="border-b-2 border-brand-600 px-4 py-3 text-sm font-semibold text-brand-600">Profile Information</button>
-        <button type="button" class="px-4 py-3 text-sm font-medium text-slate-500 hover:text-slate-700">Permissions</button>
-        <button type="button" class="px-4 py-3 text-sm font-medium text-slate-500 hover:text-slate-700">Activity</button>
     </div>
 
     <div class="space-y-6">
         <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm sm:p-6">
             <h3 class="mb-4 text-lg font-semibold text-slate-900">General Information</h3>
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                @foreach ([['Full Name', 'Vikram Malhotra'], ['Employee ID', 'JP-ADMIN-402'], ['Department', 'Operations & Fintech Compliance'], ['Joining Date', 'March 12, 2021']] as [$label, $value])
+                @foreach ([['Full Name', 'Vikram Malhotra'], ['Employee ID', 'JP-ADMIN-402'], ['Joining Date', 'March 12, 2021']] as [$label, $value])
                     <div>
                         <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">{{ $label }}</p>
                         <p class="mt-1 font-medium text-slate-900">{{ $value }}</p>

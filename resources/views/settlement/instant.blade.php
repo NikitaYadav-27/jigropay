@@ -29,7 +29,6 @@
                 <div class="mb-6 flex flex-wrap items-start justify-between gap-3">
                     <div>
                         <h2 class="text-lg font-semibold text-slate-900">Settlement details</h2>
-                        <p class="text-sm text-slate-500">Funds are credited within minutes via IMPS or NEFT.</p>
                     </div>
                     <span class="rounded-full bg-brand-100 px-3 py-0.5 text-xs font-semibold text-brand-700">Instant</span>
                 </div>
@@ -80,37 +79,9 @@
                     </div>
                 </div>
 
-                <div class="mt-5 rounded-xl border border-slate-100 bg-slate-50 p-4 text-sm">
-                    <div class="flex justify-between gap-2 py-1">
-                        <span class="text-slate-600">Gross amount</span>
-                        <span id="summary-gross" class="font-semibold text-slate-900">₹45,000.00</span>
-                    </div>
-                    <div class="flex justify-between gap-2 py-1">
-                        <span class="text-slate-600">Instant settlement fee</span>
-                        <span id="summary-fee" class="font-semibold text-slate-900">₹22.50</span>
-                    </div>
-                    <div class="flex justify-between gap-2 border-t border-slate-200 pt-2 mt-2">
-                        <span class="font-semibold text-slate-900">Net payout</span>
-                        <span id="summary-net" class="text-lg font-bold text-brand-600">₹44,977.50</span>
-                    </div>
-                </div>
+                
 
-                <div class="mt-6 rounded-xl border-2 border-dashed border-brand-200 bg-brand-50/50 p-4">
-                    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                        <div class="flex items-start gap-3">
-                            <svg class="h-6 w-6 shrink-0 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                            <div>
-                                <p class="text-sm font-semibold text-slate-900">Authorize settlement</p>
-                                <p class="text-xs text-slate-500">Enter OTP sent to mobile ending **** 9920</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-2">
-                            @for ($i = 0; $i < 6; $i++)
-                                <input type="text" maxlength="1" class="h-11 w-10 rounded-lg border border-slate-200 text-center text-lg font-semibold sm:w-11">
-                            @endfor
-                        </div>
-                    </div>
-                </div>
+                 
 
                 <div class="mt-8 flex flex-col-reverse gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:justify-end">
                     <a href="{{ route('settlement.index') }}" class="inline-flex justify-center rounded-lg border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">Cancel</a>
@@ -123,25 +94,17 @@
         </div>
 
         <div class="space-y-4">
-            <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
-                <p class="text-sm text-slate-500">Settlement wallet balance</p>
-                <p class="mt-1 text-2xl font-bold text-slate-900">₹ 8,42,900.00</p>
-                <p class="mt-1 text-xs font-medium text-emerald-600">Ready for instant payout</p>
-            </div>
+         
 
-            <div class="rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 p-5 text-white shadow-lg">
-                <svg class="mb-2 h-7 w-7 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                <p class="font-semibold">Why instant?</p>
-                <p class="mt-2 text-sm opacity-90">Skip the T+1 cycle. Merchants receive funds in under 5 minutes during banking hours.</p>
-            </div>
+           
 
             <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
-                <h3 class="text-sm font-semibold text-slate-900">Recent instant settlements</h3>
+                <h3 class="text-sm font-semibold text-slate-900">Recent settlements</h3>
                 <ul class="mt-3 divide-y divide-slate-100">
                     @foreach ([
-                        ['id' => 'SET-88421', 'name' => 'Arjun Reddy', 'amt' => '₹45,000', 'ok' => true],
-                        ['id' => 'SET-88418', 'name' => 'Lakshmi Traders', 'amt' => '₹28,400', 'ok' => true],
-                        ['id' => 'SET-88415', 'name' => 'PayMart', 'amt' => '₹8,200', 'ok' => false],
+                        ['id' => '1', 'name' => 'Arjun Reddy', 'amt' => '₹45,000', 'ok' => true],
+                        ['id' => '8', 'name' => 'Lakshmi Traders', 'amt' => '₹28,400', 'ok' => true],
+                        ['id' => '5', 'name' => 'PayMart', 'amt' => '₹8,200', 'ok' => false],
                     ] as $item)
                         <li class="flex items-center justify-between py-3 text-sm">
                             <div>
@@ -155,13 +118,10 @@
                         </li>
                     @endforeach
                 </ul>
-                <a href="{{ route('settlement.queue') }}" class="mt-3 block text-center text-sm font-semibold text-brand-600 hover:underline">View settlement queue</a>
+                <a href="{{ route('settlement.queue') }}" class="mt-3 block text-center text-sm font-semibold text-brand-600 hover:underline">View settlement history</a>
             </div>
 
-            <div class="rounded-xl border border-amber-100 bg-amber-50 p-4 text-xs text-amber-900">
-                <p class="font-semibold">Limits</p>
-                <p class="mt-1">Max ₹5,00,000 per IMPS transaction. Higher amounts use RTGS automatically.</p>
-            </div>
+            
         </div>
     </div>
 </main>

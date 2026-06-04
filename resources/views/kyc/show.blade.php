@@ -58,10 +58,7 @@
         <div class="space-y-4">
             <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
                 <div class="grid grid-cols-1 gap-4 text-sm">
-                    <div>
-                        <p class="text-slate-500">Company</p>
-                        <p class="mt-0.5 font-semibold text-slate-900">TechPay Solutions</p>
-                    </div>
+                   
                     <div>
                         <p class="text-slate-500">PAN Number</p>
                         <p class="mt-0.5 font-mono font-semibold text-slate-900">ABCDE1234F</p>
@@ -84,7 +81,7 @@
             <div class="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
                 <h3 class="text-sm font-semibold text-slate-900">All documents</h3>
                 <ul class="mt-3 divide-y divide-slate-100">
-                    @foreach (['PAN Card', 'Aadhaar Card', 'GST Certificate', 'Bank Proof', 'Shop Photo'] as $doc)
+                    @foreach (['PAN Card', 'Aadhaar Card', 'Bank Proof'] as $doc)
                         <li class="flex items-center justify-between py-2.5 text-sm">
                             <span class="text-slate-700">{{ $doc }}</span>
                             <span class="text-xs font-semibold text-emerald-600">Verified</span>

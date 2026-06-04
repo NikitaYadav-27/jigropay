@@ -18,7 +18,6 @@
                     <h2 class="text-lg font-semibold text-slate-900">Fund Request Details</h2>
                     <p class="text-sm text-slate-500">Complete the form to credit a user wallet.</p>
                 </div>
-                <span class="rounded-full bg-brand-100 px-3 py-0.5 text-xs font-semibold text-brand-700">Step 1 of 2</span>
             </div>
 
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -41,45 +40,18 @@
                     <label class="mb-1.5 block text-sm font-medium text-slate-700">Add Amount (₹)</label>
                     <input type="text" placeholder="Enter Amount" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm">
                 </div>
-                <div>
-                    <label class="mb-1.5 block text-sm font-medium text-slate-700">Payment Mode</label>
-                    <select class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm"><option>UPI Transfer</option><option>Bank Transfer</option></select>
-                </div>
-                <div>
-                    <label class="mb-1.5 block text-sm font-medium text-slate-700">Reference Number (UTR)</label>
-                    <input type="text" placeholder="TXN123456789" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm">
-                </div>
+                 
+                
             </div>
 
-            <div class="mt-4">
-                <label class="mb-1.5 block text-sm font-medium text-slate-700">Upload Payment Proof</label>
-                <div class="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 bg-slate-50 py-10 text-center">
-                    <svg class="h-10 w-10 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-                    <p class="mt-2 text-sm font-medium text-slate-700">Click to upload or drag & drop</p>
-                    <p class="text-xs text-slate-500">PNG, JPG or PDF (Max. 5MB)</p>
-                </div>
-            </div>
+            
 
             <div class="mt-4">
                 <label class="mb-1.5 block text-sm font-medium text-slate-700">Remarks</label>
                 <textarea rows="3" placeholder="Additional notes about this transaction..." class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"></textarea>
             </div>
 
-            <div class="mt-6 rounded-xl bg-sky-50 p-4">
-                <div class="flex items-start gap-3">
-                    <svg class="h-6 w-6 shrink-0 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    <div class="flex-1">
-                        <p class="text-sm font-semibold text-slate-900">Admin Authorization</p>
-                        <p class="text-xs text-slate-500">Enter OTP sent to mobile ending in **** 9920</p>
-                        <div class="mt-3 flex gap-2">
-                            @for ($i = 0; $i < 6; $i++)
-                                <input type="text" maxlength="1" class="h-11 w-11 rounded-lg border border-slate-200 text-center text-lg font-semibold">
-                            @endfor
-                        </div>
-                        <button type="button" class="mt-2 text-sm font-semibold text-brand-600 hover:underline">Resend OTP</button>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="mt-8 flex flex-col-reverse gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <a href="{{ route('wallet.index') }}" class="inline-flex justify-center rounded-lg border border-red-200 px-5 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50">Cancel</a>

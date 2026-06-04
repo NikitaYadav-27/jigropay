@@ -25,7 +25,6 @@
                 <p class="mb-3 text-xs font-bold uppercase tracking-wider text-slate-400">Filters</p>
                 <ul class="space-y-1">
                     <li><button type="button" class="flex w-full items-center justify-between rounded-lg bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700"><span class="flex items-center gap-2">∞ All Notifications</span><span class="rounded-full bg-brand-600 px-2 py-0.5 text-xs text-white">24</span></button></li>
-                    <li><button type="button" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"><span class="flex items-center gap-2"><span class="text-red-500">⚠</span> System Alerts</span><span class="text-slate-400">3</span></button></li>
                     <li><button type="button" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"><span class="flex items-center gap-2"><span class="text-amber-500">📢</span> Announcements</span><span class="text-slate-400">5</span></button></li>
                     <li><button type="button" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50"><span class="flex items-center gap-2"><span class="text-emerald-500">✓</span> Transactions</span><span class="text-slate-400">16</span></button></li>
                 </ul>
@@ -36,11 +35,7 @@
                     <label class="flex items-center gap-2"><input type="radio" name="range" class="text-brand-600"> Last 30 Days</label>
                 </div>
             </div>
-            <div class="rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 p-5 text-white shadow-lg">
-                <p class="font-semibold">Need Support?</p>
-                <p class="mt-2 text-sm opacity-90">Our compliance team is here to help with system alerts.</p>
-                <button type="button" class="mt-4 w-full rounded-lg bg-white py-2 text-sm font-semibold text-brand-700">Contact Support</button>
-            </div>
+           
         </aside>
 
         <div class="space-y-6 lg:col-span-3">
@@ -51,7 +46,6 @@
                     ['border' => 'border-l-red-500', 'icon' => 'bg-red-100 text-red-600', 'emoji' => '⚠', 'title' => 'KYC Compliance Alert', 'badge' => 'CRITICAL', 'badgeClass' => 'bg-red-100 text-red-700', 'time' => '10:45 AM', 'text' => '23 retail accounts are nearing their KYC expiration date. Immediate review required to avoid service suspension.', 'actions' => true, 'read' => false],
                     ['border' => 'border-l-emerald-500', 'icon' => 'bg-emerald-100 text-emerald-600', 'emoji' => '💰', 'title' => 'Bulk Payout Successful', 'badge' => 'SUCCESS', 'badgeClass' => 'bg-emerald-100 text-emerald-700', 'time' => '09:12 AM', 'text' => 'The weekly settlement for Batch #TXN-2024-88 has been successfully processed. Total: ₹12,45,600.', 'actions' => true, 'read' => false],
                     ['border' => 'border-l-amber-500', 'icon' => 'bg-amber-100 text-amber-600', 'emoji' => '⚙', 'title' => 'System Maintenance Update', 'badge' => 'ANNOUNCEMENT', 'badgeClass' => 'bg-amber-100 text-amber-800', 'time' => '08:00 AM', 'text' => 'Scheduled server maintenance is completed. All BBPS services are back online.', 'actions' => false, 'read' => true],
-                    ['border' => 'border-l-sky-500', 'icon' => 'bg-sky-100 text-sky-600', 'emoji' => '🛡', 'title' => 'Security Policy Update Required', 'badge' => 'ACTION', 'badgeClass' => 'bg-sky-100 text-sky-800', 'time' => '07:30 AM', 'text' => 'New 2FA security protocols have been introduced for Super Distributor accounts.', 'actions' => true, 'read' => false, 'primary' => 'Update Settings'],
                 ];
             @endphp
             @foreach ($items as $n)

@@ -28,9 +28,6 @@
         @php
             $cards = [
                 ['title' => 'Total Wallet Balance', 'value' => '₹ 34,82,451', 'sub' => 'Across 4.2k active merchant wallets', 'iconBg' => 'bg-brand-100', 'iconColor' => 'text-brand-600'],
-                ['title' => 'Recharge Requests', 'value' => '125', 'sub' => '24 requests received today', 'iconBg' => 'bg-slate-100', 'iconColor' => 'text-slate-500'],
-                ['title' => 'Pending Approvals', 'value' => '12', 'sub' => 'Avg. wait time: 14 mins', 'iconBg' => 'bg-amber-100', 'iconColor' => 'text-amber-700'],
-                ['title' => 'Failed Recharges', 'value' => '8', 'sub' => 'Requires technical review', 'iconBg' => 'bg-red-100', 'iconColor' => 'text-red-600', 'subClass' => 'text-red-600'],
             ];
         @endphp
         @foreach ($cards as $card)
@@ -50,7 +47,7 @@
     <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
         <div class="rounded-xl border border-slate-100 bg-white shadow-sm xl:col-span-2">
             <div class="flex items-center justify-between border-b border-slate-100 px-5 py-4">
-                <h2 class="text-lg font-semibold text-slate-900">Recent Recharge Requests</h2>
+                <h2 class="text-lg font-semibold text-slate-900">Recent Wallet Entries</h2>
                 <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">Export CSV</a>
             </div>
             <div class="overflow-x-auto">
@@ -129,7 +126,6 @@
                         </div>
                         <div class="text-right">
                             <p class="font-bold text-red-600">{{ $alert['balance'] }}</p>
-                            <button type="button" class="text-xs font-semibold text-brand-600 hover:underline">Notify</button>
                         </div>
                     </li>
                 @endforeach

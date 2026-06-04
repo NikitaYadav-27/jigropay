@@ -25,39 +25,27 @@
             $sections = [
                 ['title' => 'System Information', 'desc' => 'Manage basic system information and preferences', 'fields' => [
                     ['label' => 'System Name', 'type' => 'text', 'value' => 'JigroPay Platform'],
-                    ['label' => 'Default Time Zone', 'type' => 'select', 'value' => '(GMT+05:30) Asia/Kolkata'],
                 ]],
-                ['title' => 'Date & Time Settings', 'desc' => 'Configure date format and time related preferences.', 'fields' => [
-                    ['label' => 'Date Format', 'type' => 'text', 'value' => 'DD/MM/YYYY'],
-                    ['label' => 'Time Format', 'type' => 'select', 'value' => '12 Hours (AM/PM)'],
-                ]],
+               
                 ['title' => 'Session Settings', 'desc' => 'Manage user session and login related preferences', 'fields' => [
                     ['label' => 'Session Time out', 'type' => 'select', 'value' => '30 minutes'],
                     ['label' => 'Max login Attempts', 'type' => 'select', 'value' => '5 Attempts'],
                 ]],
-                ['title' => 'Default Status Settings', 'desc' => 'Set default status for new merchants and requests.', 'fields' => [
-                    ['label' => 'New Merchant Status', 'type' => 'select', 'value' => 'Pending'],
-                    ['label' => 'New Request Status', 'type' => 'select', 'value' => 'Pending'],
-                ]],
+             
                 ['title' => 'Feature Settings', 'desc' => 'Enable or disable features in the system.', 'fields' => [
-                    ['label' => 'Enable Two Factor Authentication', 'type' => 'toggle', 'checked' => true],
                     ['label' => 'Allow Merchant self Registration', 'type' => 'toggle', 'checked' => true],
                 ]],
                 ['title' => 'File Upload Settings', 'desc' => 'Configure file upload size and type restrictions.', 'fields' => [
                     ['label' => 'Max File Size', 'type' => 'select', 'value' => '10 MB'],
                     ['label' => 'Allowed File Types', 'type' => 'select', 'value' => 'jpg, jpeg, png, pdf, doc, docx'],
                 ]],
-                ['title' => 'Pagination Settings', 'desc' => 'Set default pagination preferences for listing pages.', 'fields' => [
-                    ['label' => 'Default Page Size', 'type' => 'select', 'value' => '10'],
-                    ['label' => 'Max Page Size', 'type' => 'select', 'value' => '100'],
-                ]],
+               
                 ['title' => 'Maintenance Mode', 'desc' => 'Put system into maintenance mode.', 'fields' => [
                     ['label' => 'Maintenance Mode', 'type' => 'toggle', 'checked' => false],
                     ['label' => 'Maintenance Message', 'type' => 'text', 'value' => 'System is under maintenance.'],
                 ]],
                 ['title' => 'Other Settings', 'desc' => 'Other miscellaneous system settings.', 'fields' => [
                     ['label' => 'Auto log out on inactivity', 'type' => 'select', 'value' => '15 minutes'],
-                    ['label' => 'Enable Captcha', 'type' => 'toggle', 'checked' => true],
                 ]],
             ];
         @endphp

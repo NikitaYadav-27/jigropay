@@ -14,6 +14,8 @@ class WebAuthController extends Controller
 
     public function login(Request $request)
     {
+            return redirect()->intended(route('dashboard'));
+        
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],

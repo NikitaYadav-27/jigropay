@@ -128,7 +128,6 @@
                 <h2 class="text-lg font-semibold text-slate-900">Top Performing Partners</h2>
                 <p class="text-sm text-slate-500">Distribution of revenue across major partner nodes.</p>
             </div>
-            <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">View Full Leaderboard</a>
         </div>
         <div class="overflow-x-auto">
             <table class="w-full min-w-[800px] text-left text-sm">
@@ -139,15 +138,14 @@
                         <th class="px-5 py-3">Total Value</th>
                         <th class="px-5 py-3">Net Commission</th>
                         <th class="px-5 py-3">Growth</th>
-                        <th class="px-5 py-3">Status</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100">
                     @php
                         $partners = [
-                            ['init' => 'AK', 'name' => 'Aman Kumar Enterprises', 'role' => 'Super Distributor', 'txns' => '12,450', 'value' => '₹4,25,000', 'commission' => '+₹6,840', 'growth' => '+12%', 'growthUp' => true, 'status' => 'Top Tier', 'badge' => 'bg-emerald-100 text-emerald-700'],
-                            ['init' => 'VD', 'name' => 'Vikas Digital Store', 'role' => 'Distributor', 'txns' => '8,230', 'value' => '₹2,84,100', 'commission' => '+₹4,120', 'growth' => '+8.4%', 'growthUp' => true, 'status' => 'Active', 'badge' => 'bg-emerald-100 text-emerald-700'],
-                            ['init' => 'CP', 'name' => 'City Point Agency', 'role' => 'Distributor', 'txns' => '5,410', 'value' => '₹1,95,400', 'commission' => '+₹2,950', 'growth' => '-2.1%', 'growthUp' => false, 'status' => 'Neutral', 'badge' => 'bg-sky-100 text-sky-700'],
+                            ['init' => 'AK', 'name' => 'Aman Kumar Enterprises', 'role' => 'Super Distributor', 'txns' => '12,450', 'value' => '₹4,25,000', 'commission' => '+₹6,840', 'growth' => '+12%', 'growthUp' => true],
+                            ['init' => 'VD', 'name' => 'Vikas Digital Store', 'role' => 'Distributor', 'txns' => '8,230', 'value' => '₹2,84,100', 'commission' => '+₹4,120', 'growth' => '+8.4%', 'growthUp' => true],
+                            ['init' => 'CP', 'name' => 'City Point Agency', 'role' => 'Distributor', 'txns' => '5,410', 'value' => '₹1,95,400', 'commission' => '+₹2,950', 'growth' => '-2.1%', 'growthUp' => false],
                         ];
                     @endphp
                     @foreach ($partners as $partner)
@@ -174,7 +172,6 @@
                                     {{ $partner['growth'] }}
                                 </span>
                             </td>
-                            <td class="px-5 py-4"><span class="inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold {{ $partner['badge'] }}">{{ $partner['status'] }}</span></td>
                         </tr>
                     @endforeach
                 </tbody>

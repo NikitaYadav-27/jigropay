@@ -44,11 +44,11 @@
                 <tbody class="divide-y divide-slate-100">
                     @php
                         $rows = [
-                            ['merchant' => 'QuickBazaar', 'slug' => 'quickbazaar', 'pan' => 'ABCDE1234F', 'company' => 'TechPay Solutions', 'doc' => 'PAN Card', 'date' => '20 Jan, 2026', 'status' => 'Approved', 'badge' => 'bg-emerald-100 text-emerald-700', 'dot' => 'bg-emerald-500', 'modal' => 'approved'],
-                            ['merchant' => 'ShopEasy', 'slug' => 'shopeasy', 'pan' => 'FGHIJ5678K', 'company' => 'ShopEasy Retail Pvt Ltd', 'doc' => 'PAN Card', 'date' => '19 Jan, 2026', 'status' => 'Pending', 'badge' => 'bg-amber-100 text-amber-700', 'dot' => 'bg-amber-500', 'modal' => 'review'],
-                            ['merchant' => 'PayMart', 'slug' => 'paymart', 'pan' => 'KLMNO9012P', 'company' => 'PayMart Solutions', 'doc' => 'Aadhaar Card', 'date' => '18 Jan, 2026', 'status' => 'Rejected', 'badge' => 'bg-red-100 text-red-700', 'dot' => 'bg-red-500', 'modal' => 'reject'],
-                            ['merchant' => 'UrbanPay', 'slug' => 'urbanpay', 'pan' => 'QRSTU3456V', 'company' => 'UrbanPay Networks', 'doc' => 'PAN Card', 'date' => '17 Jan, 2026', 'status' => 'Re-upload', 'badge' => 'bg-amber-100 text-amber-800', 'dot' => 'bg-amber-500', 'modal' => 'reject'],
-                            ['merchant' => 'NovaRetail', 'slug' => 'novaretail', 'pan' => 'WXYZA7890B', 'company' => 'Nova Retail Hub', 'doc' => 'GST Certificate', 'date' => '16 Jan, 2026', 'status' => 'Pending', 'badge' => 'bg-amber-100 text-amber-700', 'dot' => 'bg-amber-500', 'modal' => 'review'],
+                            ['merchant' => 'QuickBazaar', 'slug' => 'quickbazaar', 'pan' => 'ABCDE1234F','doc' => 'PAN Card', 'date' => '20 Jan, 2026', 'status' => 'Approved', 'badge' => 'bg-emerald-100 text-emerald-700', 'dot' => 'bg-emerald-500', 'modal' => 'approved'],
+                            ['merchant' => 'ShopEasy', 'slug' => 'shopeasy', 'pan' => 'FGHIJ5678K', 'doc' => 'PAN Card', 'date' => '19 Jan, 2026', 'status' => 'Pending', 'badge' => 'bg-amber-100 text-amber-700', 'dot' => 'bg-amber-500', 'modal' => 'review'],
+                            ['merchant' => 'PayMart', 'slug' => 'paymart', 'pan' => 'KLMNO9012P',  'doc' => 'Aadhaar Card', 'date' => '18 Jan, 2026', 'status' => 'Rejected', 'badge' => 'bg-red-100 text-red-700', 'dot' => 'bg-red-500', 'modal' => 'reject'],
+                            ['merchant' => 'UrbanPay', 'slug' => 'urbanpay', 'pan' => 'QRSTU3456V', 'doc' => 'PAN Card', 'date' => '17 Jan, 2026', 'status' => 'Re-upload', 'badge' => 'bg-amber-100 text-amber-800', 'dot' => 'bg-amber-500', 'modal' => 'reject'],
+                            ['merchant' => 'NovaRetail', 'slug' => 'novaretail', 'pan' => 'WXYZA7890B', 'doc' => 'GST Certificate', 'date' => '16 Jan, 2026', 'status' => 'Pending', 'badge' => 'bg-amber-100 text-amber-700', 'dot' => 'bg-amber-500', 'modal' => 'review'],
                         ];
                     @endphp
                     @foreach ($rows as $row)
@@ -74,7 +74,6 @@
                                         data-merchant="{{ $row['merchant'] }}"
                                         data-slug="{{ $row['slug'] }}"
                                         data-pan="{{ $row['pan'] }}"
-                                        data-company="{{ $row['company'] }}"
                                         data-doc="{{ $row['doc'] }}"
                                         data-date="{{ $row['date'] }}"
                                         data-status="{{ $row['status'] }}"
@@ -154,10 +153,7 @@
 
             {{-- Info grid --}}
             <div class="mb-5 grid grid-cols-2 gap-x-6 gap-y-4 rounded-xl bg-slate-50 p-4 text-sm sm:grid-cols-2">
-                <div>
-                    <p class="text-slate-500">Company</p>
-                    <p id="kyc-info-company" class="mt-0.5 font-semibold text-slate-900">TechPay Solutions</p>
-                </div>
+                
                 <div>
                     <p class="text-slate-500">PAN Number</p>
                     <p id="kyc-info-pan" class="mt-0.5 font-mono font-semibold text-slate-900">ABCDE1234F</p>
@@ -290,7 +286,6 @@
 
     function fillModal(data) {
         title.textContent = data.merchant;
-        document.getElementById('kyc-info-company').textContent = data.company;
         document.getElementById('kyc-info-pan').textContent = data.pan;
         document.getElementById('kyc-info-doc').textContent = data.doc;
         document.getElementById('kyc-info-date').textContent = data.date;

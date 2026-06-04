@@ -134,10 +134,7 @@
                         <dt class="text-slate-500">Email</dt>
                         <dd class="font-medium text-slate-900">rahul@retail.com</dd>
                     </div>
-                    <div class="flex py-2 justify-between">
-                        <dt class="text-slate-500">Shop Name</dt>
-                        <dd class="font-medium text-slate-900">Rahul Telecommunications</dd>
-                    </div>
+                     
                 </dl>
                 <div class="mt-4 border-t border-slate-100 pt-4">
                     <a href="#" class="text-sm font-semibold text-brand-600 hover:text-brand-700">View Full Profile &rarr;</a>
@@ -161,39 +158,7 @@
                 </div>
             </div>
 
-            <!-- Support & Actions -->
-            <div class="rounded-xl border border-slate-100 bg-white p-6 shadow-sm">
-                <h3 class="mb-4 text-base font-bold text-slate-900">Support & Logs</h3>
-                <div class="flex flex-col gap-3">
-                    <button type="button" class="flex items-center justify-between rounded-lg border border-slate-200 p-3 hover:bg-slate-50 transition">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 items-center justify-center rounded bg-slate-100 text-slate-500">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </div>
-                            <span class="text-sm font-medium text-slate-700">View API Request Logs</span>
-                        </div>
-                        <svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </button>
-                    <button type="button" class="flex items-center justify-between rounded-lg border border-slate-200 p-3 hover:bg-slate-50 transition">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 items-center justify-center rounded bg-slate-100 text-slate-500">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </div>
-                            <span class="text-sm font-medium text-slate-700">View Status History</span>
-                        </div>
-                        <svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </button>
-                    <button type="button" class="flex items-center justify-between rounded-lg border border-slate-200 p-3 hover:bg-slate-50 transition">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 items-center justify-center rounded bg-slate-100 text-slate-500">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-                            </div>
-                            <span class="text-sm font-medium text-slate-700">Contact Support</span>
-                        </div>
-                        <svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </button>
-                </div>
-            </div>
+           
         </div>
     </div>
 </main>
